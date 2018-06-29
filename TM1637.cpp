@@ -59,6 +59,7 @@ static int8_t TubeTab[] = {0x3f,0x06,0x5b,0x4f,0x66,0x6d,0x7d,0x07,0x7f,0x6f, //
                            0x66,0x66, //Y-y
                            0x5b,0x5b, //Z-z
                            0x00,      //" "
+                           0x63,      //°
                            0x40,0x48, //-,=
                            0x39,0x0f, //[,]
                            0x39,0x0f //(,)
@@ -127,6 +128,7 @@ static char TubeTabChars[] = {
 'Z',
 'z',
 ' ',
+'°',
 '-',
 '=',
 '[',
