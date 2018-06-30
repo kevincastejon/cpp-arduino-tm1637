@@ -6,7 +6,7 @@ Original work from [https://github.com/Seeed-Studio/Grove_4Digital_Display](http
 
 You can control a LCD tm1637 with facultative semi-colon separator
 
-Allowed characters : [aA-zZ],[0-9], ,-,=,[,],(,)
+Allowed characters : [aA-zZ],[0-9], ,°,-,=,[,],(,)
 
 Usage:
 ```
