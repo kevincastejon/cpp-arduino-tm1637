@@ -59,7 +59,6 @@ static int8_t TubeTab[] = {0x3f,0x06,0x5b,0x4f,0x66,0x6d,0x7d,0x07,0x7f,0x6f, //
                            0x66,0x66, //Y-y
                            0x5b,0x5b, //Z-z
                            0x00,      //" "
-                           0x63,      //°
                            0x40,0x48, //-,=
                            0x39,0x0f, //[,]
                            0x39,0x0f //(,)
@@ -128,7 +127,6 @@ static char TubeTabChars[] = {
 'Z',
 'z',
 ' ',
-'°',
 '-',
 '=',
 '[',
@@ -209,11 +207,17 @@ void TM1637::show(char* cha)
   int max=strlen(cha);
   int dif=4-max;
   char ret[4]="    ";
-  for (size_t j = 0; j < max; j++) {
-    ret[j+dif]=cha[j];
-  }
-  for (size_t i = 0; i < 4; i++) {
-    show(i,ret[i]);
+  if(max<=4){
+    for (size_t j = 0; j < max; j++) {
+      ret[j+dif]=cha[j];
+    }
+    for (size_t i = 0; i < 4; i++) {
+      show(i,ret[i]);
+    }
+  } else {
+    for (size_t k = 0; k < 4; k++) {
+      show(k,cha[k]);
+    }
   }
 }
 //display function.Write to full-screen
