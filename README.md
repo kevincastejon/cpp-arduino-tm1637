@@ -1,4 +1,4 @@
-# TM1637 Arduino
+# cpp-arduino-tm1637
 
 ## Control LCD display tm1637 from a arduino
 
